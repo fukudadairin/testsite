@@ -1,0 +1,71 @@
+// HTMLを読み込んだら発火
+window.addEventListener('load', function () {
+  // setTimeout(function () {
+    var obj = document.getElementById('title');//四角形のCSS
+    obj.style.cssText = 'font-weight:bold;text-Shadow:4px 3px 0px rgb(0 0 0) ,9px 8px 0px rgba(0,0,0,0.15);';
+
+    var timer;
+    var blink = function () {
+      const canvas1 = document.getElementById('canvas1'); 
+      canvas1.animate({
+        opacity: [1, 0], // [ フレーム 1, フレーム 2 ]
+        color: ["#fff", "#000"], // [ フレーム 1, フレーム 2 ]
+        transform: ['translateY(1018px)', 'translateY(-260px)'],
+        transform: ['rotate(0deg)', 'rotate(360deg)']
+      }, 4000);//●秒で処理を終わらせる
+    }
+
+    timer = setInterval(blink, 4000);
+     blink();
+
+
+
+
+  // }, 500)//コード読み込んでから何秒後に稼働するか
+});
+
+
+
+
+
+
+
+
+// HTMLを読み込んだら発火
+window.addEventListener('load', function () {
+  // setTimeout(function () {
+    var obj = document.getElementById('title');//四角形のCSS
+    obj.style.cssText = 'font-weight:bold;text-Shadow:4px 3px 0px rgb(0 0 0) ,9px 8px 0px rgba(0,0,0,0.15);';
+
+    var timer;
+    var blink = function () {
+      const canvas1 = document.getElementById('canvas1'); 
+      canvas1.animate([
+        {transform: 'translateY(1018px)'},
+        {transform: 'translateY(-260px)'}
+      
+      ],{
+        opacity: [1, 0], // [ フレーム 1, フレーム 2 ]
+        color: ["#fff", "#000"], // [ フレーム 1, フレーム 2 ]
+        transform: ['translateY(1018px)', 'translateY(-260px)'],
+        transform: ['rotate(0deg)', 'rotate(360deg)']
+      }, 4000);//●秒で処理を終わらせる
+
+      const canvas1 = document.getElementById('canvas1'); 
+      canvas1.animate([
+{
+        opacity: [1, 0], // [ フレーム 1, フレーム 2 ]
+        color: ["#fff", "#000"], // [ フレーム 1, フレーム 2 ]
+        transform: ['translateY(1018px)', 'translateY(-260px)'],
+        transform: ['rotate(0deg)', 'rotate(360deg)']
+      }, 4000);//●秒で処理を終わらせる
+    }
+
+    timer = setInterval(blink, 4000);
+     blink();
+
+
+
+
+  // }, 500)//コード読み込んでから何秒後に稼働するか
+});
